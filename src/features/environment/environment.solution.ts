@@ -4,6 +4,7 @@ export type Food = {
   name: string
   price: number
   recovery: number
+  icon: string
 }
 export type Environment = {
   tick: () => void
@@ -16,16 +17,19 @@ const foods: Food[] = [
     name: 'apple',
     price: 10,
     recovery: 10,
+    icon: '🍎',
   },
   {
     name: 'banana',
     price: 20,
     recovery: 20,
+    icon: '🍌',
   },
   {
     name: 'orange',
     price: 30,
     recovery: 30,
+    icon: '🍊',
   },
 ]
 

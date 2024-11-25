@@ -16,13 +16,14 @@ export const Game = ({
   })
 
   let intervalId: IntervalId = null
+  const tick = () => {
+    environment.tick()
+    onTick({ environment, pou })
+  }
   return {
     init: () => {
-      environment.tick()
-      intervalId = setInterval(() => {
-        environment.tick()
-      }, 2000)
-      onTick({ environment, pou })
+      tick()
+      intervalId = setInterval(tick, 2000)
     },
     over: () => {
       if (intervalId) clearInterval(intervalId)

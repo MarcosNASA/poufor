@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,29 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="app">
+      <img
+        src="/aforcita.png"
+        class="rat"
+        alt="Aforcita"
+        height="500"
+        width="350"
+      />
+
+      <main class="main">
+        <div class="stats">
+          <div class="stat">
+            <span id="health">100</span>
+            ❤️
+          </div>
+          <div class="stat"><span id="hunger">0</span>🧀</div>
+        </div>
+
+        <div id="foods">🍎🍌🍊</div>
+
+        <div id="poops">💩</div>
+      </main>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
